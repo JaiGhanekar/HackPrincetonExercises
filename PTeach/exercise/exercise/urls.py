@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(api_urls)),
     url(r'^api-auth/', include('rest_framework.urls'), name='rest_framework'),
-    url(r'^home/', include(frontend_urls, namespace='front_end')),
+    url(r'^', include(frontend_urls, namespace='front_end')),
 ]

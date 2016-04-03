@@ -33,6 +33,8 @@ class Orientation(models.Model):
     x = models.DecimalField(max_digits = 6, decimal_places = 3)
     y = models.DecimalField(max_digits = 6, decimal_places = 3)
     z = models.DecimalField(max_digits = 6, decimal_places = 3)
+    w = models.DecimalField(max_digits = 6, decimal_places = 3) 
+    
 class Score(models.Model):
     points = models.ForeignKey(Exercise, related_name='scores')
     maximum = models.IntegerField()

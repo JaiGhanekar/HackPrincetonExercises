@@ -17,7 +17,7 @@ class ExerciseSerializer(serializers.HyperlinkedModelSerializer):
 class OrientationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Orientation
-        fields = ('exercise', 'x', 'y', 'z',)
+        fields = ('exercise', 'x', 'y', 'z', 'w',)
 
 class ScoreSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
