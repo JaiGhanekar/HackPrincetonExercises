@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from api import urls as api_urls
+from frontend import urls as frontend_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(api_urls)),
     url(r'^api-auth/', include('rest_framework.urls'), name='rest_framework'),
+    url(r'^home/', include(frontend_urls, namespace='front_end')),
 ]
