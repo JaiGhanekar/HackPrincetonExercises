@@ -23,7 +23,7 @@ class Listener(DeviceListener):
         
         data = {"x":round(quat.x), "y":round(quat.y), "z":round(quat.z), "w": round(quat.w) "exercise":{}}
         r = requests.post("http://127.0.0.1:8000/api/orientations/", data = data)
-        #print(r.json())
+        print(r.json())
         if quat.w <=  -0.05:
             print("W-axis failure")
             myo.vibrate("short")
