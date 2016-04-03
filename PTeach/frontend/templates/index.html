@@ -62,9 +62,9 @@
         transform: translateY(-50%);
     }
 
-    #about {padding-top:50px; height:500px; color: #fff; background-color: #74F2D2}
-    #section2 {padding-top:50px;height:500px;color: #fff; background-color: #7494F2}
-    #section3 {padding-top:50px;height:500px;color: #fff; background-color: #9374F2}
+    #why {padding-top:50px; height:600px; color: #fff; background-color: #74F2D2}
+    #about {padding-top:50px;height:500px;color: #fff; background-color: #7494F2}
+    #how {padding-top:50px;height:500px;color: #fff; background-color: #9374F2}
     </style>
 
 </head>
@@ -83,9 +83,9 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#why">why pt?</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#section2">section 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#section3">section 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how">how to use</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">you<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -103,25 +103,31 @@
         <h2>(physical teach)</h2>
     </div>
 
-    <div id="about" class="container-fluid">
-        <h1 class="dark-bg">stop being an idiot when you're lifting.</h1>
+    <div id="why" class="container-fluid" style="padding-left:50px;">
+        <h1>lifting incorrectly can be dangerous.</h1>
         <p>
             you know when you're just trying to exercise but then you make one wrong move and suddenly you're just laying there seriously injured and you're not sure what went wrong? p.teach can fix that.
         </p>
+        <div class="row" style="padding-top:30px;">
+            <div class="col-xs-4 text-center"><img src="img/soccer.png"></div>
+            <div class="col-xs-4 text-center"><img src="img/football.png"></div>
+            <div class="col-xs-4 text-center"><img src="img/basketball.png"></div>
+        </div>
     </div>
 
-    <div id="section2" class="container-fluid">
-        <h1>
-            about us
-        </h1>
+    <div id="about" class="container-fluid" style="padding-left:50px;">
+        <h1>about</h1>
         <p>
-            .......
+            p.teach is a tool made with the myo armband. the myo armband offers wireless gesture and motion control. using analytics and metrics collected from the myo user, p.teach acts as your personal trainer to tell you whether you are performing various exercises correctly.
         </p>
+        
     </div>
 
-    <div id="section3" class="container-fluid">
-        <h1>section 3</h1>
-        <p> ... </p>
+    <div id="how" class="container-fluid" style="padding-left:50px;">
+        <h1>how p.teach works</h1>
+        <p> 
+            when you exercise, just put the myo on your arm and connect to the server. p.teach will encourage you when your lifting technique is correct, and alert you with a short vibration when it is incorrect so that you can fix your form.
+        </p>
     </div>
 
     <script>
