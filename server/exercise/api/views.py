@@ -5,7 +5,7 @@ from serializers import *
 # Create your views here.
 
 class AthleteViewSet(viewsets.ModelViewSet):
-    queryset = Athlete.objects.all().order_by('user_id')
+    queryset = Athlete.objects.all().order_by('-id')
     serializer_class =  AthleteSerializer
 
 
