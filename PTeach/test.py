@@ -21,7 +21,7 @@ class Listener(DeviceListener):
     def on_orientation_data(self, myo, timestamp, quat):
         # print("Orientation:", quat.x, quat.y, quat.z, quat.w)
         
-        data = {"x":quat.x, "y":quat.y, "z":quat.z, "w": quat.w}
+        data = {"x":round(quat.x), "y":round(quat.y), "z":round(quat.z), "w": round(quat.w)}
         r = requests.post("http://127.0.0.1:8000/api/orientations/", data = data)
         print(r.json())
         if quat.w <=  -0.05:
