@@ -4,7 +4,7 @@ from rest_framework import serializers
 class AthleteSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Athlete
-        fields = ('username','first_name', 'last_name', 'email', 'groups', 'goal', 'user')
+        fields = ('goal', 'user',)
 
 
 class ExerciseSerializer(serializers.HyperlinkedModelSerializer):
