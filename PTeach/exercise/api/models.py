@@ -18,11 +18,12 @@ class Athlete(models.Model):
     For more information, go to:
     https://docs.djangoproject.com/en/1.8/ref/contrib/auth/
     """
+
     goal = models.CharField(max_length=200, blank=False)
     user = models.OneToOneField(User)
 
 class Exercise(models.Model):
-    performer = models.ForeignKey(Athlete, related_name='exercises')
+    athlete = models.ForeignKey(Athlete, related_name='exercises')
     status = models.BooleanField()
     completed = models.BooleanField()
     name = models.CharField(max_length=200, blank=False)

@@ -7,7 +7,8 @@ router.register(r'^athletes', AthleteViewSet)
 router.register(r'^exercises', ExerciseViewSet)
 router.register(r'^orientations', OrientationViewSet)
 router.register(r'^scores', ScoreViewSet)
-
+router.register(r'users', UserViewSet)
+router.register(r'groups', GroupViewSet)
 
 
 
