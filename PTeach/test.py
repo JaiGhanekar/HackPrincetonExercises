@@ -21,21 +21,22 @@ class Listener(DeviceListener):
     def on_orientation_data(self, myo, timestamp, quat):
         # print("Orientation:", quat.x, quat.y, quat.z, quat.w)
         
-        data = {"x":round(quat.x), "y":round(quat.y), "z":round(quat.z), "w": round(quat.w) "exercise": {"athlete":"none", "name":"curl"}}
+        athlete = {"athlete":"none", "name":"curl"}
+        data = {"x":round(quat.x), "y":round(quat.y), "z":round(quat.z), "w": round(quat.w) "exercise": athlete}
         r = requests.post("http://127.0.0.1:8000/api/orientations/", data = data)
         print(r.json())
         if quat.w <=  -0.05:
             print("W-axis failure")
-            myo.vibrate("short")
+            # myo.vibrate("short")
         elif quat.x >  0.6:
             print("X-axis failure")
-            myo.vibrate("short")
+            # myo.vibrate("short")
         elif quat.y > 0.8:
             print("Y-axis failure")
-            myo.vibrate("short")
+            # myo.vibrate("short")
         elif quat.z > 0.1:
             print("Z-axis failure")
-            myo.vibrate("short")
+            # myo.vibrate("short")
         else:
             print("Good job!")
 
